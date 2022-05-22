@@ -1,9 +1,9 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const inquirer = require("inquirer");
-require("console.table");
+const cTable = require("console.table");
 
 const connection = mysql.createConnection({ 
-    host: "120.0.0.1",
+    host: "127.0.0.1",
     port: "3306",
     user: "root",
     password: "rootpass",
@@ -94,7 +94,6 @@ function viewAllEmployees() {
     });
 }
 
-//VIEW EMPLOYEES BY DEPARTMENT
 function viewEmployeesByDepartment(){
     let query =
     `SELECT 
